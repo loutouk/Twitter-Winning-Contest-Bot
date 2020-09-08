@@ -20,7 +20,7 @@ public class TweetProducerTask implements Runnable {
     private static final boolean DEBUG = true;
     private static final String LOG_MODE = "CONSOLE";
 
-    // Tries do not fill the tweets buffer faster than we empty it
+    // Tries to not fill the tweet buffer faster than we empty it
     // Bot.TWEET_NB_PER_QUERY is an optimistic number because many are not going to be treated (false positive)
     private static final int MIN_WAIT_SEC = (Bot.TWEET_NB_PER_QUERY * TweetConsumerTask.AVG_WAIT_SEC)/10;
     private static final int AVG_WAIT_SEC = MIN_WAIT_SEC;
